@@ -1,3 +1,7 @@
+...
+from core.views import UserViewSet
+from core.views import CategoriaViewSet # nova linha
+
 from django.contrib import admin
 from django.urls import include, path
 
@@ -14,6 +18,11 @@ from core.views import UserViewSet
 router = DefaultRouter()
 
 router.register(r"users", UserViewSet, basename="users")
+
+router = DefaultRouter()
+router.register(r"categorias", CategoriaViewSet) # nova linha
+router.register(r"users", UserViewSet, basename="users")
+...
 
 urlpatterns = [
     path("admin/", admin.site.urls),

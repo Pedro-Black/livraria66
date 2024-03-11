@@ -1,6 +1,8 @@
 """
 Database models.
 """
+from django.db import models
+
 from django.contrib.auth.models import (
     AbstractBaseUser,
     BaseUserManager,
@@ -44,3 +46,6 @@ class User(AbstractBaseUser, PermissionsMixin):
     objects = UserManager()
 
     USERNAME_FIELD = "email"
+
+class Categoria(models.Model):
+    descricao = models.CharField(max_length=100)
