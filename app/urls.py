@@ -1,7 +1,7 @@
 ...
 from core.views import UserViewSet
 from core.views import CategoriaViewSet # nova linha
-
+from core.views import UserViewSet, CategoriaViewSet, EditoraViewSet
 from django.contrib import admin
 from django.urls import include, path
 
